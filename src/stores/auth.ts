@@ -12,10 +12,8 @@ export const useAuthStore = defineStore('auth', {
     async login(payload: any) {
       this.isLoading = true
       try {
-        // 1. 設定 Header (確保 interviewername 是英文避免之前的 ISO 錯誤)
         const INTERVIEWER_NAME = 'MinXuanChiang'
 
-        // 2. 發送請求
         const response = await axios.post(
           'https://api-frontend-interview-server.metcfire.com.tw/create-account',
           payload,
@@ -26,7 +24,6 @@ export const useAuthStore = defineStore('auth', {
           },
         )
 
-        // 3. 根據你提供的回傳結構解析：response.data.account.id
         if (response.data && response.data.account) {
           const id = response.data.account.id
           const email = response.data.account.email
