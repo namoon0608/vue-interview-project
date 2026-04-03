@@ -56,11 +56,9 @@ npm run dev
 📦 打包生產環境 (Build for Production)
 若要部署專案，請執行以下命令產生 dist 資料夾：
 
-Bash
 npm run build
 執行預覽（測試打包後的結果）：
 
-Bash
 npm run preview
 💡 注意事項
 API 限制: 本專案目前對接測試環境 API，請確保網路連線正常。
